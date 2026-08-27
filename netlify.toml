@@ -1,0 +1,18 @@
+# Configuración de despliegue en Netlify.
+# El plugin de Next.js lo instala Netlify solo al detectar el framework;
+# aquí solo fijamos lo que no conviene dejar a la adivinanza.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Fijar la versión evita que un cambio del lado de Netlify
+  # rompa el despliegue sin que nadie haya tocado el código.
+  NODE_VERSION = "22"
+
+  # Netlify revisa el resultado del build buscando valores de variables
+  # filtrados, y aborta si encuentra alguno. Las variables NEXT_PUBLIC_
+  # van a propósito dentro del código que corre en el navegador, así que
+  # sin esta lista el despliegue falla por un problema que no existe.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,NEXT_PUBLIC_SITE_URL"

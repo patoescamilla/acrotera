@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hueso:  #F2EFE7;
+  --color-crema:  #E6E2D6;
+  --color-arena:  #C2BCA9;
+  --color-cafe:   #2C1907;
+  --color-tinta:  #1A1818;
+  --color-cobre:  #A8825C;
+  --color-humo:   #5C5349;
+  --color-niebla: #8A8074;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans:  var(--font-jost), "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    background-color: var(--color-hueso);
+    color: var(--color-tinta);
+    font-family: var(--font-sans);
+    font-weight: 300;
+  }
+  ::selection { background: var(--color-cafe); color: var(--color-crema); }
+}
+
+@utility eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-cobre);
+}
+
+@utility label-xs {
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Marca reproducida como mascara: se recolorea con `text-*` segun el fondo. */
+@utility logotipo {
+  display: block;
+  background-color: currentColor;
+  -webkit-mask: url("/logo.png") center / contain no-repeat;
+  mask: url("/logo.png") center / contain no-repeat;
+}

@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.env
+.env.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# Binario de la CLI de Stripe: 38 MB, no va al repositorio
+stripe.exe
+stripe*.exe
