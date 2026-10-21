@@ -49,7 +49,7 @@ export function SlotUploader({
       return;
     }
     if (file.size > MAX_BYTES) {
-      setError("La imagen pesa mas de 8 MB. Compriela antes de subirla.");
+      setError("La imagen pesa más de 8 MB. Comprímela antes de subirla.");
       return;
     }
 

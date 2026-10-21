@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useCart } from "@/components/cart-provider";
 
-/** Vacia la bolsa al aterrizar en la página de confirmación. */
+/** Vacía la bolsa al aterrizar en la página de confirmación. */
 export function ClearCart() {
   const { clear, ready } = useCart();
 

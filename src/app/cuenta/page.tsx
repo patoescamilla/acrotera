@@ -52,11 +52,11 @@ export default async function CuentaPage() {
               </Link>
             )}
             <Link href="/cuenta/contrasena" className="label-xs text-cafe underline">
-              Cambiar contrasena
+              Cambiar contraseña
             </Link>
             <form action="/auth/signout" method="post">
               <button type="submit" className="label-xs text-niebla underline">
-                Cerrar sesion
+                Cerrar sesión
               </button>
             </form>
           </div>
@@ -107,8 +107,8 @@ export default async function CuentaPage() {
         )}
 
         <p className="mt-8 text-[12px] leading-relaxed text-niebla">
-          Compraste como invitado y no ves tu pedido aqui? Los pedidos hechos sin sesion no quedan
-          ligados a una cuenta. Escribenos a {ajustes.contacto_email} con tu numero de pedido.
+          ¿Compraste como invitado y no ves tu pedido aquí? Los pedidos hechos sin sesión no quedan
+          ligados a una cuenta. Escríbenos a {ajustes.contacto_email} con tu número de pedido.
         </p>
       </main>
 

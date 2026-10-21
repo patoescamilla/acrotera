@@ -47,7 +47,7 @@ export default async function EditarProductoPage({
 
       {nuevo && (
         <p className="border border-cafe/25 bg-crema p-3.5 text-[12px] text-cafe">
-          Producto creado. Ahora sube sus fotos y cambia el estado a Publicado cuando este listo.
+          Producto creado. Ahora sube sus fotos y cambia el estado a Publicado cuando esté listo.
         </p>
       )}
 

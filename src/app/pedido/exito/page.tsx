@@ -37,7 +37,7 @@ export default async function ExitoPage({
       <main className="mx-auto max-w-lg px-5 py-28 text-center">
         <span className="eyebrow">Gracias</span>
         <h1 className="mt-4 font-serif text-4xl font-light leading-tight">
-          Tu pedido esta
+          Tu pedido está
           <br />
           confirmado
         </h1>
@@ -60,19 +60,19 @@ export default async function ExitoPage({
             </dl>
             {order.status === "pending" && (
               <p className="mt-4 text-[11px] leading-relaxed text-cobre">
-                Estamos esperando la confirmacion del pago. Si pagaste en OXXO, el pedido se
-                activa en cuanto el deposito se registre.
+                Estamos esperando la confirmación del pago. Si pagaste en OXXO, el pedido se
+                activa en cuanto el depósito se registre.
               </p>
             )}
           </div>
         ) : (
           <p className="mt-6 text-[13px] leading-relaxed text-humo">
-            Recibiras un correo con los detalles de tu compra en los proximos minutos.
+            Recibirás un correo con los detalles de tu compra en los próximos minutos.
           </p>
         )}
 
         <p className="mt-8 text-[13px] leading-[1.9] text-humo">
-          Nos pondremos en contacto para coordinar la entrega. Si tienes dudas, escribenos a
+          Nos pondremos en contacto para coordinar la entrega. Si tienes dudas, escríbenos a
           {ajustes.contacto_email}.
         </p>
 

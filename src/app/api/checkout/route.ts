@@ -51,7 +51,7 @@ export async function POST(request: Request) {
   try {
     body = (await request.json()) as Body;
   } catch {
-    return NextResponse.json({ error: "Peticion invalida." }, { status: 400 });
+    return NextResponse.json({ error: "Petición inválida." }, { status: 400 });
   }
 
   const items = (body.items ?? [])
@@ -67,17 +67,17 @@ export async function POST(request: Request) {
   const customer = limpiarCliente(body.customer ?? {});
 
   if (items.length === 0) {
-    return NextResponse.json({ error: "Tu bolsa esta vacía." }, { status: 400 });
+    return NextResponse.json({ error: "Tu bolsa está vacía." }, { status: 400 });
   }
 
   if (items.some((i) => i.quantity > MAX_POR_LINEA)) {
     return NextResponse.json(
-      { error: `Maximo ${MAX_POR_LINEA} piezas por articulo. Escribenos para pedidos mayores.` },
+      { error: `Máximo ${MAX_POR_LINEA} piezas por artículo. Escríbenos para pedidos mayores.` },
       { status: 400 },
     );
   }
 
-  // Un mismo producto repetido en varias lineas burlaria el tope de arriba.
+  // Un mismo producto repetido en varias líneas burlaría el tope de arriba.
   if (new Set(items.map((i) => i.productId)).size !== items.length) {
     return NextResponse.json({ error: "Hay artículos repetidos en la bolsa." }, { status: 400 });
   }
@@ -88,13 +88,13 @@ export async function POST(request: Request) {
   }
 
   if (!EMAIL.test(customer.email)) {
-    return NextResponse.json({ error: "El correo no parece valido." }, { status: 400 });
+    return NextResponse.json({ error: "El correo no parece válido." }, { status: 400 });
   }
 
   const supabase = createAdminClient();
 
   // Los precios SIEMPRE se releen de la base. Lo que manda el navegador
-  // solo indica que producto y cuantas piezas, nunca cuanto cuestan.
+  // solo indica qué producto y cuántas piezas, nunca cuánto cuestan.
   const { data: products, error } = await supabase
     .from("products")
     .select("id, name, slug, price_cents, currency, stock, status, product_images(path, sort_order)")
@@ -119,7 +119,7 @@ export async function POST(request: Request) {
 
     if (!product || product.status !== "active") {
       return NextResponse.json(
-        { error: "Una de las piezas ya no esta disponible. Actualiza tu bolsa." },
+        { error: "Una de las piezas ya no está disponible. Actualiza tu bolsa." },
         { status: 409 },
       );
     }

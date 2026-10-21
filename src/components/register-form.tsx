@@ -84,7 +84,7 @@ export function RegisterForm() {
         <input type="email" name="email" required autoComplete="email" className={inputClass} />
       </Field>
 
-      <Field label="Contrasena" hint="Mínimo 8 caracteres.">
+      <Field label="Contraseña" hint="Mínimo 8 caracteres.">
         <input
           type="password"
           name="password"
@@ -119,7 +119,7 @@ export function RegisterForm() {
       <p className="text-center text-[11px] text-niebla">
         Ya tienes cuenta?{" "}
         <Link href="/login" className="underline">
-          Inicia sesion
+          Inicia sesión
         </Link>
       </p>
     </form>

@@ -52,7 +52,7 @@ export default async function ProductoPage({ params }: { params: Promise<{ slug:
 
   const fichas = [
     ["Medidas y materiales", [product.dimensions, product.material].filter(Boolean).join(" · ")],
-    ["Envío e instalación", "Entrega en 4 a 6 semanas. Instalación incluida en CDMX y area metropolitana. Resto del pais por paqueteria especializada."],
+    ["Envío e instalación", "Entrega en 4 a 6 semanas. Instalación incluida en CDMX y área metropolitana. Resto del país por paquetería especializada."],
     ["Cuidado de la pieza", product.care],
   ].filter(([, value]) => Boolean(value)) as [string, string][];
 

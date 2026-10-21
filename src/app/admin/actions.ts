@@ -8,7 +8,7 @@ import type { OrderStatus, ProductStatus } from "@/lib/types";
 
 export type ActionState = { ok: boolean; message: string } | null;
 
-/** Toda accion del panel vuelve a verificar el rol en el servidor. */
+/** Toda acción del panel vuelve a verificar el rol en el servidor. */
 async function requireAdmin() {
   const user = await getAdminUser();
   if (!user) throw new Error("No tienes permiso para hacer esto.");
@@ -211,9 +211,7 @@ export async function updateOrderStatus(
   return { ok: true, message: `Pedido marcado como ${NOMBRE_ESTADO[status] ?? status}.` };
 }
 
-// ============================================================
-//  Imágenes editables del sitio y de las categorías
-// ============================================================
+// Imágenes editables del sitio y de las categorías.
 
 const RUTAS_PUBLICAS = ["/", "/interiorismo", "/nosotros", "/tienda"];
 
@@ -229,7 +227,7 @@ export async function setSiteImage(formData: FormData): Promise<void> {
   const alt = String(formData.get("alt") ?? "") || null;
   if (!slot || !path) return;
 
-  // Si la ranura ya tenia foto, se borra del bucket para no acumular basura.
+  // Si la ranura ya tenía foto, se borra del bucket para no acumular basura.
   const { data: actual } = await supabase
     .from("site_images")
     .select("path")
@@ -299,15 +297,13 @@ export async function clearCategoryImage(formData: FormData): Promise<void> {
   revalidarSitio();
 }
 
-// ============================================================
-//  Textos y ajustes editables
-// ============================================================
+// Textos y ajustes editables.
 
 export async function updateSettings(_prev: ActionState, formData: FormData): Promise<ActionState> {
   const supabase = await requireAdmin();
 
   // La lista de ajustes se lee de la base, no del formulario:
-  // asi nadie puede inventar claves nuevas desde el navegador.
+  // así nadie puede inventar claves nuevas desde el navegador.
   const { data: ajustes, error } = await supabase.from("site_settings").select("key, type");
   if (error || !ajustes) return { ok: false, message: "No pudimos leer los ajustes." };
 

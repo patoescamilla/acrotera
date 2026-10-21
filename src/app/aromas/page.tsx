@@ -40,7 +40,7 @@ export default async function AromasPage() {
           <span className="eyebrow">Eau de maison</span>
           <h1 className="mt-4 font-serif text-6xl font-light leading-none text-crema">Baie 19</h1>
           <p className="mt-6 max-w-md font-serif text-lg leading-relaxed opacity-80">
-            La energia de una tormenta seca. El olor de la piedra, de la tierra, del aire justo
+            La energía de una tormenta seca. El olor de la piedra, de la tierra, del aire justo
             antes de la lluvia.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default async function AromasPage() {
           {[
             ["Notas de salida", ["Enebro", "Bergamota", "Pimienta rosa"]],
             ["Notas de corazon", ["Hoja de higo", "Musgo verde", "Vetiver"]],
-            ["Notas de fondo", ["Pachuli", "Ambar", "Madera seca"]],
+            ["Notas de fondo", ["Pachulí", "Ámbar", "Madera seca"]],
           ].map(([title, notes]) => (
             <div key={title as string}>
               <p className="eyebrow mb-3.5">{title as string}</p>
@@ -88,7 +88,7 @@ export default async function AromasPage() {
         />
         {products.length === 0 ? (
           <p className="py-12 text-center font-serif text-2xl opacity-50">
-            La linea de aromas se publica muy pronto.
+            La línea de aromas se publica muy pronto.
           </p>
         ) : (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

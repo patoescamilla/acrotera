@@ -121,7 +121,7 @@ export default async function TiendaPage({
 
           {products.length === 0 ? (
             <p className="py-20 text-center font-serif text-2xl text-niebla">
-              Aun no hay piezas publicadas en esta categoria.
+              Aún no hay piezas publicadas en esta categoría.
             </p>
           ) : (
             <div className="grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">

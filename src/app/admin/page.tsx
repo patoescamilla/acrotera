@@ -49,7 +49,7 @@ export default async function AdminHome() {
 
       {orders.length === 0 ? (
         <p className="border border-cafe/12 bg-crema p-8 text-center text-[13px] text-niebla">
-          Todavia no hay pedidos.
+          Todavía no hay pedidos.
         </p>
       ) : (
         <div className="overflow-x-auto border border-cafe/12">

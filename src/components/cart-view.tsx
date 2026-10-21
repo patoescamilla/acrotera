@@ -11,9 +11,9 @@ import { money } from "@/lib/format";
 const ESTADOS = [
   "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua",
   "Ciudad de México", "Coahuila", "Colima", "Durango", "Estado de México", "Guanajuato",
-  "Guerrero", "Hidalgo", "Jalisco", "Michoacan", "Morelos", "Nayarit", "Nuevo León", "Oaxaca",
-  "Puebla", "Queretaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco",
-  "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatan", "Zacatecas",
+  "Guerrero", "Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca",
+  "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco",
+  "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas",
 ];
 
 export type CheckoutDefaults = { email: string; customer_name: string };
@@ -56,7 +56,7 @@ export function CartView({
 
       window.location.href = data.url;
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Ocurrio un error inesperado.");
+      setError(err instanceof Error ? err.message : "Ocurrió un error inesperado.");
       setLoading(false);
     }
   }
@@ -66,7 +66,7 @@ export function CartView({
   if (lines.length === 0) {
     return (
       <div className="py-24 text-center">
-        <p className="font-serif text-2xl text-niebla">Tu bolsa esta vacía.</p>
+        <p className="font-serif text-2xl text-niebla">Tu bolsa está vacía.</p>
         <Link href="/tienda" className="label-xs mt-6 inline-block border border-cafe px-8 py-3.5 text-cafe">
           Ver el catalogo
         </Link>
@@ -134,7 +134,7 @@ export function CartView({
                 className={inputClass}
               />
             </Field>
-            <Field label="Telefono">
+            <Field label="Teléfono">
               <input name="phone" required className={inputClass} />
             </Field>
             <Field label="Código postal">
@@ -191,7 +191,7 @@ export function CartView({
 
         {envio > 0 && (
           <p className="mt-3 text-[11px] leading-relaxed text-cobre">
-            Te faltan {money(config.umbral - subtotalCents)} para el envio sin costo.
+            Te faltan {money(config.umbral - subtotalCents)} para el envío sin costo.
           </p>
         )}
 

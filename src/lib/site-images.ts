@@ -5,8 +5,8 @@ export type SiteImageMap = Record<string, SiteImage>;
 
 /**
  * Lee de una sola vez todas las imágenes editables del sitio.
- * Si la migracion todavía no se ha corrido, devuelve un mapa vacío
- * y las paginas caen a sus degradados de respaldo.
+ * Si la migración todavía no se ha corrido, devuelve un mapa vacío
+ * y las páginas caen a sus degradados de respaldo.
  */
 export async function getSiteImages(): Promise<SiteImageMap> {
   const supabase = await createClient();

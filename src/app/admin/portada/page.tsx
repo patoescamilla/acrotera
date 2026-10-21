@@ -23,7 +23,7 @@ export default async function PortadaPage() {
     supabase.from("categories").select("*").order("sort_order"),
   ]);
 
-  // La migracion de imágenes todavía no se ha corrido.
+  // La migración de imágenes todavía no se ha corrido.
   if (error) {
     return (
       <div className="max-w-2xl">
@@ -32,9 +32,9 @@ export default async function PortadaPage() {
           <p className="mb-3 text-[13px] leading-relaxed text-humo">
             Falta un paso en la base de datos. Abre Supabase, ve al SQL Editor y ejecuta el
             archivo <code className="text-cafe">supabase/migration-01-imagenes.sql</code> del
-            proyecto. Despues recarga esta pagina.
+            proyecto. Después recarga esta página.
           </p>
-          <p className="text-[11px] leading-relaxed text-niebla">Detalle tecnico: {error.message}</p>
+          <p className="text-[11px] leading-relaxed text-niebla">Detalle técnico: {error.message}</p>
         </div>
       </div>
     );
@@ -48,21 +48,21 @@ export default async function PortadaPage() {
     <div className="max-w-5xl">
       <h1 className="mb-2 font-serif text-4xl font-light">Portada</h1>
       <p className="mb-9 max-w-xl text-[13px] leading-[1.9] text-humo">
-        Las fotos fijas del sitio: las que no pertenecen a ningun producto. Los cambios se ven en
-        la tienda de inmediato. Si dejas una vacia, esa zona muestra un fondo de color en lugar de
+        Las fotos fijas del sitio: las que no pertenecen a ningún producto. Los cambios se ven en
+        la tienda de inmediato. Si dejas una vacía, esa zona muestra un fondo de color en lugar de
         quedar rota.
       </p>
 
       <section className="mb-11">
         <h2 className="mb-1 font-serif text-2xl font-light">Categorías</h2>
         <p className="mb-5 text-[13px] text-humo">
-          Los tres bloques de la portada. Se recortan en vertical, asi que elige fotos donde el
-          motivo este al centro.
+          Los tres bloques de la portada. Se recortan en vertical, así que elige fotos donde el
+          motivo esté al centro.
         </p>
 
         {categories.length === 0 ? (
           <p className="border border-cafe/12 bg-crema p-6 text-[13px] text-niebla">
-            No hay categorias todavia.
+            No hay categorías todavía.
           </p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -107,7 +107,7 @@ export default async function PortadaPage() {
         <Link href="/" className="underline">
           Ver la tienda
         </Link>{" "}
-        para revisar como quedaron.
+        para revisar cómo quedaron.
       </p>
     </div>
   );

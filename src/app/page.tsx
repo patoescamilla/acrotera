@@ -114,9 +114,9 @@ export default async function HomePage() {
             que susurran calma
           </h2>
           <p className="mt-5 max-w-md text-[13px] leading-[1.9] text-humo">
-            Cada pieza se elige por como se comporta con el tiempo: la madera que se oscurece, el
-            lino que se ablanda, el aroma que se vuelve familiar. No disenamos escenarios,
-            disenamos rutinas.
+            Cada pieza se elige por cómo se comporta con el tiempo: la madera que se oscurece, el
+            lino que se ablanda, el aroma que se vuelve familiar. No diseñamos escenarios,
+            diseñamos rutinas.
           </p>
           <div className="mt-7">
             <ButtonLink href="/nosotros">Conocer Acrotera</ButtonLink>
@@ -126,7 +126,7 @@ export default async function HomePage() {
 
       {featured.length > 0 && (
         <section className="mx-auto max-w-[1400px] px-5 py-20 md:px-11">
-          <SectionHeading eyebrow="Seleccion" title="Lo mas buscado" />
+          <SectionHeading eyebrow="Selección" title="Lo más buscado" />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {featured.map((p) => (
               <ProductCard key={p.id} product={p} />
@@ -144,20 +144,20 @@ export default async function HomePage() {
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <div>
-            <span className="eyebrow">La linea de aromas</span>
+            <span className="eyebrow">La línea de aromas</span>
             <h2 className="mt-3.5 font-serif text-4xl font-light leading-tight text-crema">
               Naturaleza
               <br />
               sin filtro
             </h2>
             <p className="mt-4 max-w-sm text-[13px] leading-[1.9] opacity-70">
-              Tres composiciones desarrolladas en Mexico, pensadas para habitarse todo el dia.
+              Tres composiciones desarrolladas en México, pensadas para habitarse todo el día.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-6">
               {[
                 ["Salida", "Enebro", "Bergamota"],
-                ["Corazon", "Higo", "Musgo verde"],
-                ["Fondo", "Pachuli", "Ambar"],
+                ["Corazón", "Higo", "Musgo verde"],
+                ["Fondo", "Pachulí", "Ámbar"],
               ].map(([title, a, b]) => (
                 <div key={title}>
                   <div className="eyebrow mb-2">{title}</div>

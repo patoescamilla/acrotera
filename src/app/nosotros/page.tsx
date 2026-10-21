@@ -9,9 +9,9 @@ export const revalidate = 60;
 export const metadata = { title: "Nosotros" };
 
 const PROCESO = [
-  ["01", "Descubrimiento", "Empezamos con una conversacion: como vives el espacio, que conservas, que te estorba. De ahi sale el moodboard y la paleta de materiales."],
+  ["01", "Descubrimiento", "Empezamos con una conversación: cómo vives el espacio, qué conservas, qué te estorba. De ahí sale el moodboard y la paleta de materiales."],
   ["02", "Diseño y producción", "Desarrollamos las piezas en taller propio con maderas certificadas y tapicerias naturales. Cada mueble se prueba antes de salir."],
-  ["03", "Instalacion", "Entregamos, montamos y aromatizamos. Te dejamos una guia de cuidado para que la pieza envejezca bien."],
+  ["03", "Instalación", "Entregamos, montamos y aromatizamos. Te dejamos una guía de cuidado para que la pieza envejezca bien."],
 ];
 
 export default async function NosotrosPage() {
@@ -31,8 +31,8 @@ export default async function NosotrosPage() {
           una casa
         </h1>
         <p className="mx-auto mt-6 max-w-xl font-serif text-lg leading-relaxed text-humo">
-          En la arquitectura clasica, la <i>acrotera</i> es la pieza que corona el edificio: el
-          ultimo gesto, el que no sostiene nada pero lo completa todo. Asi entendemos los objetos de
+          En la arquitectura clásica, la <i>acrotera</i> es la pieza que corona el edificio: el
+          último gesto, el que no sostiene nada pero lo completa todo. Así entendemos los objetos de
           la casa.
         </p>
       </section>
@@ -47,7 +47,7 @@ export default async function NosotrosPage() {
       <section className="bg-cafe px-5 py-20 text-crema md:px-14">
         <div className="mx-auto max-w-[1400px]">
           <div className="mb-12 text-center">
-            <span className="eyebrow">Como trabajamos</span>
+            <span className="eyebrow">Cómo trabajamos</span>
             <h2 className="mt-3.5 font-serif text-4xl font-light tracking-[0.06em] text-crema">
               EL PROCESO
             </h2>
@@ -74,8 +74,8 @@ export default async function NosotrosPage() {
           </h2>
           <p className="mt-5 max-w-md text-[13px] leading-[1.9] text-humo">
             Trabajamos con maderas macizas, fibras naturales y ceras vegetales. Evitamos los
-            acabados que no se pueden restaurar y los aromas de sintesis agresiva. Si una pieza se
-            dana, la arreglamos.
+            acabados que no se pueden restaurar y los aromas de síntesis agresiva. Si una pieza se
+            daña, la arreglamos.
           </p>
         </div>
         <SlotImage
@@ -98,7 +98,7 @@ export default async function NosotrosPage() {
           ))}
           {ajustes.showroom_horario}
         </p>
-        <ButtonLink href={mapa}>Como llegar</ButtonLink>
+        <ButtonLink href={mapa}>Cómo llegar</ButtonLink>
       </section>
 
       <SiteFooter />

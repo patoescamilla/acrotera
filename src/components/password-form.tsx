@@ -45,7 +45,7 @@ export function PasswordForm() {
   if (listo) {
     return (
       <p className="border border-cafe/25 bg-crema p-3.5 text-[12px] leading-relaxed text-cafe">
-        Contrasena actualizada. Ya puedes usarla la proxima vez que entres.
+        Contraseña actualizada. Ya puedes usarla la próxima vez que entres.
       </p>
     );
   }
@@ -63,7 +63,7 @@ export function PasswordForm() {
         />
       </Field>
 
-      <Field label="Repitela">
+      <Field label="Repítela">
         <input
           type="password"
           name="password2"

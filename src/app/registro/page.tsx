@@ -18,7 +18,7 @@ export default async function RegistroPage() {
         <div className="bg-hueso p-8">
           <h1 className="mb-1.5 font-serif text-2xl font-light">Crear cuenta</h1>
           <p className="mb-7 text-[13px] leading-relaxed text-humo">
-            Para seguir tus pedidos y no volver a escribir tu direccion.
+            Para seguir tus pedidos y no volver a escribir tu dirección.
           </p>
           <RegisterForm />
         </div>

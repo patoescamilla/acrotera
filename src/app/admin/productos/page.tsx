@@ -28,7 +28,7 @@ export default async function ProductosPage() {
 
       {products.length === 0 ? (
         <p className="border border-cafe/12 bg-crema p-12 text-center text-[13px] text-niebla">
-          Aun no hay productos. Empieza creando el primero.
+          Aún no hay productos. Empieza creando el primero.
         </p>
       ) : (
         <div className="overflow-x-auto border border-cafe/12">

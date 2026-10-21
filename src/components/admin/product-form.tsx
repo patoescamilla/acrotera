@@ -37,7 +37,7 @@ export function ProductForm({
         {isEdit && <input type="hidden" name="id" value={product!.id} />}
 
         <section className="border border-cafe/12 bg-crema p-6">
-          <h2 className="label-xs mb-5 text-cafe">Información basica</h2>
+          <h2 className="label-xs mb-5 text-cafe">Información básica</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="sm:col-span-2">
               <Field label="Nombre de la pieza">
@@ -49,7 +49,7 @@ export function ProductForm({
               <input name="slug" defaultValue={product?.slug} placeholder="sillon-vela" className={inputClass} />
             </Field>
 
-            <Field label="Categoria">
+            <Field label="Categoría">
               <select name="category_id" defaultValue={product?.category_id ?? ""} className={inputClass}>
                 <option value="">Sin categoría</option>
                 {categories.map((c) => (
@@ -59,11 +59,11 @@ export function ProductForm({
             </Field>
 
             <div className="sm:col-span-2">
-              <Field label="Descripción corta" hint="Aparece bajo el nombre en el catálogo. Una linea.">
+              <Field label="Descripción corta" hint="Aparece bajo el nombre en el catálogo. Una línea.">
                 <input
                   name="short_description"
                   defaultValue={product?.short_description ?? ""}
-                  placeholder="Boucle arena"
+                  placeholder="Bouclé arena"
                   className={inputClass}
                 />
               </Field>
@@ -128,7 +128,7 @@ export function ProductForm({
               <input
                 name="material"
                 defaultValue={product?.material ?? ""}
-                placeholder="Boucle y encino macizo"
+                placeholder="Bouclé y encino macizo"
                 className={inputClass}
               />
             </Field>
@@ -198,7 +198,7 @@ export function ProductForm({
           action={deleteProduct}
           className="border border-red-800/20 bg-red-50/50 p-6"
           onSubmit={(e) => {
-            if (!confirm(`Eliminar "${product!.name}" y todas sus imagenes? Esto no se puede deshacer.`)) {
+            if (!confirm(`¿Eliminar "${product!.name}" y todas sus imágenes? Esto no se puede deshacer.`)) {
               e.preventDefault();
             }
           }}

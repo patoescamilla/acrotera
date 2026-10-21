@@ -4,7 +4,7 @@ import { LoginForm } from "@/components/login-form";
 export const metadata = { title: "Acceso" };
 
 const MENSAJES: Record<string, string> = {
-  "enlace-invalido": "Ese enlace ya se uso o expiro. Pide uno nuevo.",
+  "enlace-invalido": "Ese enlace ya se usó o expiró. Pide uno nuevo.",
 };
 
 export default async function LoginPage({

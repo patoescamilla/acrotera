@@ -26,7 +26,7 @@ export function slugify(input: string) {
     .slice(0, 80);
 }
 
-/** Precio en pesos, tal como lo teclea la clienta, convertido a centavos enteros. */
+/** Precio en pesos, tal como lo teclea quien administra la tienda, convertido a centavos enteros. */
 export function pesosACentavos(value: string | number) {
   const n = typeof value === "number" ? value : Number(String(value).replace(/[^0-9.]/g, ""));
   if (!Number.isFinite(n)) return 0;

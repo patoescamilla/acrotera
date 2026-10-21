@@ -46,7 +46,7 @@ export default async function BolsaPage() {
           <p className="mb-8 text-[13px] leading-relaxed text-humo">
             Puedes comprar sin cuenta.{" "}
             <Link href="/login?redirect=/bolsa" className="text-cafe underline">
-              Inicia sesion
+              Inicia sesión
             </Link>{" "}
             si quieres que el pedido quede guardado en tu historial.
           </p>

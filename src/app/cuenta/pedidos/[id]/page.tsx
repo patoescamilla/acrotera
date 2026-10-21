@@ -24,7 +24,7 @@ export default async function PedidoClientePage({ params }: { params: Promise<{ 
   if (!user) redirect(`/login?redirect=/cuenta/pedidos/${id}`);
 
   // Las reglas de la base ya limitan esto a los pedidos propios:
-  // si el pedido es de alguien mas, simplemente no aparece.
+  // si el pedido es de alguien más, simplemente no aparece.
   const { data } = await supabase
     .from("orders")
     .select("*, order_items(*)")
@@ -120,7 +120,7 @@ export default async function PedidoClientePage({ params }: { params: Promise<{ 
             )}
 
             <p className="mt-6 text-[11px] leading-relaxed text-niebla">
-              Dudas sobre este pedido? Escribenos a {ajustes.contacto_email} citando el numero{" "}
+              ¿Dudas sobre este pedido? Escríbenos a {ajustes.contacto_email} citando el número{" "}
               {order.order_number}.
             </p>
           </div>

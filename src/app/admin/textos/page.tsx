@@ -17,9 +17,9 @@ export default async function TextosPage() {
           <p className="mb-3 text-[13px] leading-relaxed text-humo">
             Falta un paso en la base de datos. Abre Supabase, ve al SQL Editor y ejecuta el archivo{" "}
             <code className="text-cafe">supabase/migration-02-textos.sql</code> del proyecto.
-            Despues recarga esta pagina.
+            Después recarga esta página.
           </p>
-          <p className="text-[11px] leading-relaxed text-niebla">Detalle tecnico: {error.message}</p>
+          <p className="text-[11px] leading-relaxed text-niebla">Detalle técnico: {error.message}</p>
         </div>
       </div>
     );
@@ -29,7 +29,7 @@ export default async function TextosPage() {
     <div className="max-w-4xl">
       <h1 className="mb-2 font-serif text-4xl font-light">Textos</h1>
       <p className="mb-9 max-w-xl text-[13px] leading-[1.9] text-humo">
-        El anuncio de arriba, el titular de la portada, el monto de envio gratis y los datos de
+        El anuncio de arriba, el titular de la portada, el monto de envío gratis y los datos de
         contacto. Los cambios se ven en la tienda de inmediato.
       </p>
 
@@ -39,7 +39,7 @@ export default async function TextosPage() {
         <Link href="/" className="underline">
           Ver la tienda
         </Link>{" "}
-        para revisar como quedaron.
+        para revisar cómo quedaron.
       </p>
     </div>
   );

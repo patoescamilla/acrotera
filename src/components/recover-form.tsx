@@ -29,8 +29,8 @@ export function RecoverForm() {
       return;
     }
 
-    // Se responde igual exista o no la cuenta: revelar cuales correos
-    // estan registrados le sirve a quien anda tanteando.
+    // Se responde igual exista o no la cuenta: revelar cuáles correos
+    // están registrados le sirve a quien anda tanteando.
     setEnviado(true);
     setLoading(false);
   }
@@ -40,10 +40,10 @@ export function RecoverForm() {
       <div>
         <p className="mb-4 text-[13px] leading-[1.9] text-humo">
           Si ese correo tiene una cuenta con nosotros, ya va en camino un enlace para crear una
-          contrasena nueva.
+          contraseña nueva.
         </p>
         <Link href="/login" className="label-xs text-cafe underline">
-          Volver al inicio de sesion
+          Volver al inicio de sesión
         </Link>
       </div>
     );

@@ -36,7 +36,7 @@ export function LoginForm({ redirectTo }: { redirectTo?: string }) {
       return;
     }
 
-    // Sin destino explicito, cada quien aterriza donde le toca.
+    // Sin destino explícito, cada quien aterriza donde le toca.
     let destino = redirectTo;
     if (!destino) {
       const { data: profile } = await supabase
@@ -57,7 +57,7 @@ export function LoginForm({ redirectTo }: { redirectTo?: string }) {
         <input type="email" name="email" required autoComplete="email" className={inputClass} />
       </Field>
 
-      <Field label="Contrasena">
+      <Field label="Contraseña">
         <input
           type="password"
           name="password"
@@ -79,7 +79,7 @@ export function LoginForm({ redirectTo }: { redirectTo?: string }) {
 
       <div className="flex justify-between text-[11px] text-niebla">
         <Link href="/recuperar" className="underline">
-          Olvide mi contrasena
+          Olvidé mi contraseña
         </Link>
         <Link href="/registro" className="underline">
           Crear cuenta

@@ -31,11 +31,11 @@ export function ImageManager({
 
     for (const file of Array.from(files)) {
       if (!TIPOS.includes(file.type)) {
-        setError(`"${file.name}" no es una imagen valida. Usa JPG, PNG, WebP o AVIF.`);
+        setError(`"${file.name}" no es una imagen válida. Usa JPG, PNG, WebP o AVIF.`);
         continue;
       }
       if (file.size > MAX_BYTES) {
-        setError(`"${file.name}" pesa mas de 5 MB. Comprimela antes de subirla.`);
+        setError(`"${file.name}" pesa más de 5 MB. Comprímela antes de subirla.`);
         continue;
       }
 
@@ -128,7 +128,7 @@ export function ImageManager({
                       key={dir}
                       type="button"
                       disabled={busy || (dir === "up" ? index === 0 : index === ordenadas.length - 1)}
-                      aria-label={dir === "up" ? "Mover antes" : "Mover despues"}
+                      aria-label={dir === "up" ? "Mover antes" : "Mover después"}
                       onClick={() => {
                         const form = new FormData();
                         form.set("product_id", productId);
@@ -147,7 +147,7 @@ export function ImageManager({
                   type="button"
                   disabled={busy}
                   onClick={() => {
-                    if (!confirm("Eliminar esta imagen?")) return;
+                    if (!confirm("¿Eliminar esta imagen?")) return;
                     const form = new FormData();
                     form.set("product_id", productId);
                     form.set("image_id", img.id);

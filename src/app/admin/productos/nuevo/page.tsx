@@ -12,7 +12,7 @@ export default async function NuevoProductoPage() {
     <div className="max-w-4xl">
       <h1 className="mb-2 font-serif text-4xl font-light">Nuevo producto</h1>
       <p className="mb-8 text-[13px] text-humo">
-        Guarda la ficha primero; despues podras subir las fotos.
+        Guarda la ficha primero; después podrás subir las fotos.
       </p>
       <ProductForm categories={(data ?? []) as Category[]} />
     </div>

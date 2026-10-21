@@ -38,7 +38,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <form action="/auth/signout" method="post">
             <input type="hidden" name="next" value="/login" />
             <button type="submit" className="label-xs text-cafe underline">
-              Cerrar sesion
+              Cerrar sesión
             </button>
           </form>
         </div>

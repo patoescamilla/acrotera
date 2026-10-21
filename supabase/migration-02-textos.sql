@@ -1,6 +1,6 @@
 -- ============================================================
 --  ACROTERA · migración 02
---  Textos y ajustes que la clienta puede cambiar sola:
+--  Textos y ajustes que quien administra la tienda puede cambiar desde el panel:
 --  barra de promoción, envío, hero de la portada y contacto.
 --
 --  Ejecutar en Supabase -> SQL Editor, después de la migración 01.
@@ -25,7 +25,7 @@ create trigger site_settings_touch before update on public.site_settings
 
 -- El "value" se guarda siempre como texto y cada tipo se interpreta
 -- al leerlo: 'money' son centavos, 'boolean' es 'true' o 'false'.
--- Asi se agregan ajustes nuevos sin tocar el esquema.
+-- Así se agregan ajustes nuevos sin tocar el esquema.
 insert into public.site_settings (key, label, hint, type, value, grupo, sort_order) values
   ('promo_activa',  'Mostrar la barra de promoción', 'Apagada, el sitio se ve más limpio y la barra pesa más cuando sí aparece.', 'boolean', 'true',
    'Barra de promoción', 1),
@@ -61,7 +61,7 @@ on conflict (key) do update
       type  = excluded.type,
       grupo = excluded.grupo,
       sort_order = excluded.sort_order;
-      -- ojo: "value" no se toca, para no pisar lo que ya escribió la clienta
+      -- ojo: "value" no se toca, para no pisar lo que ya se escribió desde el panel
 
 alter table public.site_settings enable row level security;
 

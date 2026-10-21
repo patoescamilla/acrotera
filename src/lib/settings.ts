@@ -5,7 +5,7 @@ import type { SiteSetting } from "@/lib/types";
 
 export type Settings = Record<string, string>;
 
-/** Valores de respaldo: si la migracion 02 aun no corre, el sitio no se cae. */
+/** Valores de respaldo: si la migración 02 aún no corre, el sitio no se cae. */
 export const AJUSTES_POR_DEFECTO: Settings = {
   promo_activa: "true",
   promo_texto: "Envío sin costo en pedidos superiores a {envio}",
@@ -13,7 +13,7 @@ export const AJUSTES_POR_DEFECTO: Settings = {
   envio_umbral: "350000",
   envio_costo: "25000",
   hero_eyebrow: "Colección Otoño",
-  hero_titulo: "El hogar se\npuede ver asi",
+  hero_titulo: "El hogar se\npuede ver así",
   hero_texto: "Muebles de líneas suaves y aromas que sostienen la memoria de un espacio.",
   hero_boton: "Ver la colección",
   hero_boton_url: "/tienda",
@@ -38,7 +38,7 @@ export async function getSettings(): Promise<Settings> {
   return aMapa(data as SiteSetting[]);
 }
 
-/** Version para rutas de API, que no tienen sesión de usuario. */
+/** Versión para rutas de API, que no tienen sesión de usuario. */
 export async function getSettingsAdmin(): Promise<Settings> {
   const supabase = createAdminClient();
   const { data, error } = await supabase.from("site_settings").select("*").order("sort_order");

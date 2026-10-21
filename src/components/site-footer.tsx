@@ -14,7 +14,7 @@ const COLUMNS = [
   {
     title: "Servicio",
     links: [
-      ["Envios y entregas", "/nosotros"],
+      ["Envíos y entregas", "/nosotros"],
       ["Cambios y devoluciones", "/nosotros"],
       ["Cuidado de piezas", "/nosotros"],
       ["Interiorismo", "/interiorismo"],
@@ -88,7 +88,7 @@ export async function SiteFooter({ tone = "cafe" }: { tone?: "cafe" | "tinta" })
 
         <div className="label-xs mt-12 flex flex-col gap-2 border-t border-crema/18 pt-5 opacity-55 sm:flex-row sm:justify-between">
           <span>&copy; {new Date().getFullYear()} Acrotera</span>
-          <span>Aviso de privacidad &middot; Terminos</span>
+          <span>Aviso de privacidad &middot; Términos</span>
         </div>
       </div>
     </footer>

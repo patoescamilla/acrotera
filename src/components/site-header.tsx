@@ -1,7 +1,7 @@
 import { HeaderShell, type Promo } from "@/components/header-shell";
 import { getSettings, esVerdadero, aCentavos, conMontos } from "@/lib/settings";
 
-/** Envoltura de servidor: resuelve la promocion y se la pasa al encabezado. */
+/** Envoltura de servidor: resuelve la promoción y se la pasa al encabezado. */
 export async function SiteHeader({ tone = "light" }: { tone?: "light" | "dark" }) {
   const ajustes = await getSettings();
 

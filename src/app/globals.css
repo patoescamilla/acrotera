@@ -38,7 +38,7 @@
   text-transform: uppercase;
 }
 
-/* Marca reproducida como mascara: se recolorea con `text-*` segun el fondo. */
+/* Marca reproducida como máscara: se recolorea con `text-*` según el fondo. */
 @utility logotipo {
   display: block;
   background-color: currentColor;
